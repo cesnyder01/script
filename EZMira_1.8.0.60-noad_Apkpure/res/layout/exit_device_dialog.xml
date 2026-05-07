@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/translucent_black" android:layout_width="@dimen/exit_dialog_width" android:layout_height="@dimen/exit_dialog_height" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/cancel" android:background="@null" android:layout_width="@dimen/exit_device_dialog_btn_width" android:layout_height="@dimen/exit_device_dialog_btn_height" android:layout_marginLeft="11.0dp" android:layout_marginBottom="5.0dp" android:src="@drawable/exit_device_cancel_selector" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="19.0sp" android:id="@id/text_msg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/confirm_title" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <ImageButton android:id="@id/ok" android:background="@null" android:layout_width="@dimen/exit_device_dialog_btn_width" android:layout_height="@dimen/exit_device_dialog_btn_height" android:layout_marginRight="11.0dp" android:layout_marginBottom="5.0dp" android:src="@drawable/exit_device_ok_selector" android:layout_alignTop="@id/cancel" android:layout_alignParentRight="true" />
+</RelativeLayout>

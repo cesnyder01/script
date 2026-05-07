@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/header" android:layout_width="match_parent" android:layout_height="@dimen/header_size" android:layout_margin="5.0dp" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="@color/font_color" android:gravity="center" android:id="@id/miracast_header_view" android:background="@drawable/tab_button_press" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/miracast_title" android:layout_weight="1.0" android:paddingHorizontal="15.0dp" />
+        <TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" android:textColor="@color/font_color" android:gravity="center" android:id="@id/ezmira_header_view" android:background="@drawable/tab_button" android:paddingLeft="15.0dp" android:paddingRight="15.0dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/miraapp_airplay_title" android:layout_weight="1.0" android:paddingHorizontal="15.0dp" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/miracast_place" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/header">
+        <LinearLayout android:orientation="horizontal" android:id="@id/chromecast_guide_place" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/guide_size">
+            <ImageView android:id="@id/chromecast_guide_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:src="@drawable/ic_app_help" />
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:gravity="center_vertical" android:id="@id/chromecast_guide_text_view" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/chromecast_guide" android:layout_marginStart="20.0dp" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/miracast_guide_place" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/guide_size" android:layout_below="@id/chromecast_guide_place">
+            <ImageView android:id="@id/miracast_guide_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:src="@drawable/ic_app_help" />
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:gravity="center_vertical" android:id="@id/miracast_guide_text_view" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/miracast_guide" android:layout_marginStart="20.0dp" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/ad_place" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/miracast_guide_place">
+            <com.google.android.ads.nativetemplates.TemplateView android:id="@id/ad_template" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" app:gnt_template_type="@layout/gnt_small_template_view" />
+        </LinearLayout>
+        <androidx.viewpager.widget.ViewPager android:id="@id/miracast_guide_view_pager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/indicator_line" android:layout_below="@id/ad_place" />
+        <com.lwj.widget.viewpagerindicator.ViewPagerIndicator android:id="@id/indicator_line" android:background="#00000000" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_above="@id/miracast_connect" app:vpi_default_color="@color/background_media_item_list_fragment_color" app:vpi_distanceType="BY_DISTANCE" app:vpi_indicatorType="CIRCLE" app:vpi_radius="5.0dp" app:vpi_selected_color="@color/colorPrimary" />
+        <Button android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textStyle="bold" android:textColor="@drawable/connect_button_text_color" android:gravity="center" android:id="@id/miracast_connect" android:background="@drawable/miracast_connect_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="@string/search_device_title" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/ezmira_place" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/header">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ezmira_guide_place" android:layout_width="match_parent" android:layout_height="@dimen/guide_size">
+            <ImageView android:id="@id/ezmira_guide_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:src="@drawable/ic_app_help" />
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:gravity="center_vertical" android:id="@id/ezmira_guide_text_view" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/ezmira_guide" android:layout_marginStart="25.0dp" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/qrcode_place" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_below="@id/ezmira_guide_place">
+            <ImageView android:id="@id/qr_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:src="@drawable/ic_qecode" />
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:gravity="center_vertical" android:id="@id/qrcode_text_view" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/qrcode_guide" android:layout_marginStart="25.0dp" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/bt_connect_place" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_below="@id/qrcode_place">
+            <ImageView android:id="@id/bt_connect_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:src="@drawable/ic_bt_connect" />
+            <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:gravity="center_vertical" android:id="@id/bt_connect_text_view" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/bt_connect_guide" android:layout_marginStart="25.0dp" />
+        </LinearLayout>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipe_view_devicelist" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/bt_connect_place">
+            <androidx.recyclerview.widget.RecyclerView android:name="com.winnerwave.miraapp.devicelist.DeviceListFragment" android:id="@id/list" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/ezmira_guide_place" android:layout_marginStart="16.0dp" android:layout_marginEnd="16.0dp" app:layoutManager="LinearLayoutManager" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+</RelativeLayout>

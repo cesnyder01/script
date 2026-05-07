@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/toolbar_place" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/toolbar_02" />
+    <RelativeLayout android:id="@id/main_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/toolbar_place" />
+    <RelativeLayout android:id="@id/progress_view" android:background="#7f000000" android:visibility="invisible" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@id/iezvu_main_progressImage" android:background="@drawable/new_indeterminate_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

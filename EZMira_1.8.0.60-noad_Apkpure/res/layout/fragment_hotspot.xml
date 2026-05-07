@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/hotspot" android:background="#ffffff" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/hotspot_guide" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:gravity="center_vertical" android:id="@id/hotspot_guide_title" android:background="#dddddd" android:paddingLeft="20.0dp" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_marginTop="20.0dp" android:text="@string/hotspot_guide" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textColor="@color/font_color_orange" android:gravity="center" android:id="@id/hotspot_showguide" android:layout_width="match_parent" android:layout_height="60.0dp" android:text="@string/hotspot_guide_button" android:layout_below="@id/hotspot_guide_title" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/hotspot_setting_block" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="60.0dp" android:layout_below="@id/hotspot_guide">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:gravity="center_vertical" android:id="@id/hotspot_setting_title" android:background="#dddddd" android:paddingLeft="25.0dp" android:layout_width="match_parent" android:layout_height="40.0dp" android:text="@string/hotspot_setting" />
+        <RelativeLayout android:id="@id/hotspot_ssid_block" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/hotspot_setting_title">
+            <LinearLayout android:orientation="horizontal" android:id="@id/hotspot_ssid_linear" android:paddingLeft="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:src="@drawable/hotspot_ssid" />
+                <TextView android:textSize="18.0sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:text="@string/hotspot_SSID" />
+            </LinearLayout>
+            <EditText android:id="@id/hotspot_ssid_input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="60.0dp" android:layout_marginRight="20.0dp" android:layout_below="@id/hotspot_ssid_linear" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/hotspot_password_block" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/hotspot_ssid_block">
+            <LinearLayout android:orientation="horizontal" android:id="@id/hotspot_password_linear" android:paddingLeft="20.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:src="@drawable/hotspot_password" />
+                <TextView android:textSize="18.0sp" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dp" android:text="@string/hotspot_password" />
+            </LinearLayout>
+            <EditText android:id="@id/hotspot_password_input" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="60.0dp" android:layout_marginRight="20.0dp" android:layout_below="@id/hotspot_password_linear" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/button_place" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/hotspot_setting_block" android:layout_centerHorizontal="true">
+        <ImageButton android:id="@id/hotspot_cancel_button" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dp" android:src="@drawable/hotspot_cancel" />
+        <ImageButton android:id="@id/hotspot_connect_button" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dp" android:src="@drawable/hotspot_ok" android:layout_toEndOf="@id/hotspot_cancel_button" />
+    </RelativeLayout>
+    <TextView android:id="@id/hotspot_wifiap_hint_text" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="25.0dp" android:text="@string/hotspot_wifiap_hint" android:layout_below="@id/button_place" android:layout_marginStart="8.0dp" />
+</RelativeLayout>

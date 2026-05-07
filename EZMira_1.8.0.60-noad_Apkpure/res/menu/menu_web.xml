@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_home" android:id="@id/home" android:title="@string/title_home" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_reload" android:id="@id/reload" android:title="@string/title_reload" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_back_disabled_holo_dark" android:id="@id/back" android:title="@string/title_back" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_forward_disabled_holo_dark" android:id="@id/forward" android:title="@string/title_forward" app:showAsAction="always" />
+</menu>

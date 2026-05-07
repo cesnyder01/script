@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main_content" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:titleTextColor="@android:color/white" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@id/bottom_navigation" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="0.0dp" android:layout_alignParentBottom="true" app:menu="@menu/bottom_nav_menu" />
+    <com.winnerwave.miraapp.view.horizontalviewpagerwebview.CustomViewPager android:id="@id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/bottom_navigation" android:layout_below="@id/toolbar" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <include layout="@layout/media_streaming" />
+    <include layout="@layout/check_firmware" />
+</RelativeLayout>

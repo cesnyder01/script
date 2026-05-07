@@ -1,0 +1,105 @@
+.class public final Lcom/google/android/gms/internal/ads/zzbnc;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzepq;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<AdT:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/google/android/gms/internal/ads/zzepq<",
+        "Lcom/google/android/gms/internal/ads/zzbnd<",
+        "TAdT;>;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field private final zzfuq:Lcom/google/android/gms/internal/ads/zzeqd;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/android/gms/internal/ads/zzeqd<",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/google/android/gms/internal/ads/zzcqq<",
+            "TAdT;>;>;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method private constructor <init>(Lcom/google/android/gms/internal/ads/zzeqd;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/internal/ads/zzeqd<",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/google/android/gms/internal/ads/zzcqq<",
+            "TAdT;>;>;>;)V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzbnc;->zzfuq:Lcom/google/android/gms/internal/ads/zzeqd;
+
+    return-void
+.end method
+
+.method public static zzd(Lcom/google/android/gms/internal/ads/zzeqd;)Lcom/google/android/gms/internal/ads/zzbnc;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<AdT:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/google/android/gms/internal/ads/zzeqd<",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/google/android/gms/internal/ads/zzcqq<",
+            "TAdT;>;>;>;)",
+            "Lcom/google/android/gms/internal/ads/zzbnc<",
+            "TAdT;>;"
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzbnc;
+
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/ads/zzbnc;-><init>(Lcom/google/android/gms/internal/ads/zzeqd;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final synthetic get()Ljava/lang/Object;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzbnc;->zzfuq:Lcom/google/android/gms/internal/ads/zzeqd;
+
+    invoke-interface {v0}, Lcom/google/android/gms/internal/ads/zzeqd;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map;
+
+    .line 2
+    new-instance v1, Lcom/google/android/gms/internal/ads/zzbnd;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/internal/ads/zzbnd;-><init>(Ljava/util/Map;)V
+
+    return-object v1
+.end method

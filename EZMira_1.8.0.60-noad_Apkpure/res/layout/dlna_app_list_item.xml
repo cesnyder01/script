@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?selectableItemBackground" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/app_icon" android:layout_width="@dimen/appicon_size" android:layout_height="@dimen/appicon_size" android:layout_margin="5.0dp" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+    <ImageView android:id="@id/help_icon" android:layout_width="20.0dp" android:layout_height="20.0dp" android:layout_margin="5.0dp" android:src="@drawable/ic_app_help" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" android:layout_marginTop="5.0dp" android:layout_marginBottom="5.0dp" android:layout_centerVertical="true" android:layout_marginStart="15.0dp" android:layout_toStartOf="@id/help_icon" android:layout_toEndOf="@id/app_icon">
+        <TextView android:textSize="18.0sp" android:ellipsize="end" android:id="@id/app_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="name" android:maxLines="1" />
+    </LinearLayout>
+</RelativeLayout>

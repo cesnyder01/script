@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bt_pairing_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bg_bt_pairing" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <View android:id="@id/divider_01" android:background="@drawable/toolbar_dropshadow" android:layout_width="match_parent" android:layout_height="2.0dp" android:layout_below="@id/bt_pairing_image" android:layout_marginStart="4.0dp" android:layout_marginEnd="4.0dp" />
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/wifi_ssid_place" android:layout_width="match_parent" android:layout_height="44.0dp" android:layout_below="@id/divider_01" android:layout_marginStart="4.0dp" android:layout_marginEnd="4.0dp">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textColor="@android:color/black" android:gravity="center_vertical" android:id="@id/tv_wifi_ssid" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textColor="@android:color/darker_gray" android:gravity="end|center" android:id="@id/tv_switch_wifi" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/text_switch_wifi" />
+    </LinearLayout>
+    <View android:id="@id/divider_02" android:background="@drawable/toolbar_dropshadow" android:layout_width="match_parent" android:layout_height="2.0dp" android:layout_below="@id/wifi_ssid_place" android:layout_marginStart="4.0dp" android:layout_marginEnd="4.0dp" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/wifi_pw_place" android:layout_width="match_parent" android:layout_height="44.0dp" android:layout_below="@id/divider_02" android:layout_marginStart="4.0dp" android:layout_marginEnd="4.0dp">
+        <EditText android:textAppearance="@style/TextAppearance.AppCompat.Medium" android:textColor="@android:color/darker_gray" android:textColorHint="@android:color/darker_gray" android:id="@id/wifi_password_input" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/text_wifi_passwd_hint" android:layout_weight="1.0" android:inputType="textPassword" />
+        <ImageView android:layout_gravity="end|center" android:id="@id/toggle_password_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_action_eye_closed" android:layout_centerVertical="true" />
+    </LinearLayout>
+    <View android:id="@id/divider_03" android:background="@drawable/toolbar_dropshadow" android:layout_width="match_parent" android:layout_height="2.0dp" android:layout_below="@id/wifi_pw_place" android:layout_marginStart="4.0dp" android:layout_marginEnd="4.0dp" />
+    <Button android:id="@id/btn_connect_wifi" android:layout_width="match_parent" android:text="@string/text_connect" android:layout_below="@id/divider_03" android:layout_centerHorizontal="true" style="@style/LightCornerButton" />
+</RelativeLayout>

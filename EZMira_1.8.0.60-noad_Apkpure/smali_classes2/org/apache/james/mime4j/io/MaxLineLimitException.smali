@@ -1,0 +1,18 @@
+.class public Lorg/apache/james/mime4j/io/MaxLineLimitException;
+.super Lorg/apache/james/mime4j/MimeIOException;
+.source "SourceFile"
+
+
+# static fields
+.field private static final serialVersionUID:J = 0x6f9044fce602dfd5L
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lorg/apache/james/mime4j/MimeIOException;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/activity_main" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/fake_action_bar" android:background="@drawable/bg_qrheader" android:layout_width="match_parent" android:layout_height="?actionBarSize">
+        <TextView android:textColor="@color/qrscanner_text_colorPrimary" android:id="@id/fake_action_bar_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qr_scanner_action_bar_title" android:layout_centerInParent="true" style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title" />
+    </RelativeLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/relative_camera_preview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/fake_action_bar">
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView android:id="@id/zxing_barcode_scanner" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintBottom_toTopOf="@id/tv_option" app:layout_constraintStart_toStartOf="parent" app:zxing_scanner_layout="@layout/custom_barcode_scanner" />
+        <TextView android:textColor="@color/qrscanner_text_colorPrimary" android:gravity="center" android:id="@id/tv_option" android:background="@drawable/bg_qrfooter" android:visibility="gone" android:layout_width="match_parent" android:layout_height="?actionBarSize" android:text="@string/qr_scanner_option_title" android:onClick="onOptionClick" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/TextAppearance.AppCompat.Medium" />
+        <Button android:id="@id/btn_wire_option" android:background="@drawable/ic_wired_qrcode" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qr_scanner_button_wire" android:onClick="onWireOptionClick" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/zxing_barcode_scanner" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@id/zxing_barcode_scanner" app:layout_constraintVertical_bias="0.8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout android:id="@id/relative_connecting" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/fake_action_bar">
+        <include android:id="@id/image_connect_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dp" android:layout_centerInParent="true" layout="@layout/connecting_image_layout" />
+        <TextView android:id="@id/text_connect_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="connecting" android:layout_below="@id/image_connect_status" android:layout_centerHorizontal="true" />
+        <Button android:id="@id/button_done" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Done" android:layout_below="@id/text_connect_status" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/relative_qr_guide" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/fake_action_bar">
+        <ImageView android:id="@id/guide_qr" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/guide_qrcode" android:scaleType="centerInside" />
+        <Button android:id="@id/button_pick_wifi" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_connect" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

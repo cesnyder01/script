@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/prerference_divider" />
+    <Preference android:icon="@drawable/ic_miracast" android:title="@string/ezmirror_title" android:key="key_miracast" android:summary="@string/ezmirror_subtitle" />
+    <Preference android:icon="@drawable/ic_dlna" android:title="@string/dlna_title" android:key="key_dlna" android:summary="@string/dlna_subtitle" />
+    <PreferenceCategory android:layout="@layout/prerference_divider" />
+    <Preference android:icon="@drawable/ic_chromecast_mirror" android:title="@string/chromecast_mirror_help" android:key="key_chromecast_mirror" />
+    <Preference android:icon="@drawable/ic_hotspot" android:title="@string/hotspot" android:key="key_hotspot" />
+    <Preference android:icon="@drawable/ic_tutorial" android:title="@string/miracast_turorial_title" android:key="key_tutorial" android:summary="@string/miracast_turorial_subtitle" />
+    <PreferenceCategory android:layout="@layout/prerference_divider" />
+    <Preference android:icon="@drawable/ic_message" android:title="@string/mira_notification" android:key="key_notification" />
+    <Preference android:icon="@drawable/ic_faq" android:title="@string/faq" android:key="key_faq" />
+    <Preference android:icon="@drawable/ic_about" android:title="@string/mira_about" android:key="key_about" />
+    <PreferenceCategory android:layout="@layout/prerference_divider" />
+    <Preference android:icon="@drawable/ic_term_of_use" android:title="@string/term_of_use_title" android:key="key_term_of_use" />
+    <PreferenceCategory android:title="@string/title_analytics">
+        <CheckBoxPreference android:title="@string/title_firebase_analytics" android:key="key_checkbox_firebase" android:defaultValue="true" android:disableDependentsState="true" />
+        <Preference android:title="@string/title_privacy_policy" android:key="key_open_analytic_web" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/prerference_divider" />
+    <Preference android:title="" android:key="key_app_version" />
+    <PreferenceCategory android:layout="@layout/prerference_divider" />
+    <PreferenceCategory android:title="@string/title_stage" android:key="category_stage">
+        <ListPreference android:entries="@array/stage_entries" android:key="preference_stage" android:summary="production" android:defaultValue="1" android:entryValues="@array/stage_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,51 @@
+.class Lcom/winnerwave/miraapp/devicelist/c$g;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/winnerwave/miraapp/devicelist/c;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic b:Lcom/winnerwave/miraapp/devicelist/c;
+
+
+# direct methods
+.method constructor <init>(Lcom/winnerwave/miraapp/devicelist/c;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/winnerwave/miraapp/devicelist/c$g;->b:Lcom/winnerwave/miraapp/devicelist/c;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 0
+
+    .line 1
+    iget-object p1, p0, Lcom/winnerwave/miraapp/devicelist/c$g;->b:Lcom/winnerwave/miraapp/devicelist/c;
+
+    invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/winnerwave/miraapp/helper/c;->a(Landroid/app/Activity;)V
+
+    return-void
+.end method

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/background_mediaitem_listitem_selector" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/mediaitem_textcolor_selector" android:gravity="right" android:id="@id/list_item_number" android:layout_width="50.0dp" android:layout_height="wrap_content" android:layout_marginRight="4.0dp" android:text="1" android:layout_centerVertical="true" />
+    <RelativeLayout android:id="@id/list_item_image_place" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dp" android:layout_toRightOf="@id/list_item_number" android:layout_centerVertical="true">
+        <ImageView android:id="@id/list_item_image" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="50.0dp" android:layout_toRightOf="@id/list_item_image_place" android:layout_centerVertical="true">
+        <TextView android:textSize="16.0sp" android:textColor="@color/mediaitem_textcolor_selector" android:id="@id/list_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title here" android:singleLine="true" />
+        <TextView android:textSize="14.0sp" android:textColor="#000000" android:id="@id/list_item_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/list_item_title" />
+    </LinearLayout>
+</RelativeLayout>

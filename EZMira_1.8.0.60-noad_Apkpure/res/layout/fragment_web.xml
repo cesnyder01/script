@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/url_bar" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="@drawable/url_bar_background" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="6.0dp" android:layout_weight="1.0">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/progress_bar" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent" style="@android:style/Widget.ProgressBar.Horizontal" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:textColor="#000" android:id="@id/urlText" android:background="@null" android:padding="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:ems="10" android:singleLine="true" android:selectAllOnFocus="true" android:inputType="textUri" android:imeOptions="actionGo" android:textCursorDrawable="@null" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <com.winnerwave.miraapp.view.horizontalviewpagerwebview.CustomWebView android:id="@id/webview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/url_bar">
+        <requestFocus />
+    </com.winnerwave.miraapp.view.horizontalviewpagerwebview.CustomWebView>
+</RelativeLayout>
