@@ -22,18 +22,19 @@ def get_apk_files(folder):
     return [f for f in os.listdir(folder) if f.endswith('.apk')]
 
 def decompile_apk(apk_path):
-    """Runs apktool, returns the output folder path or None on failure."""
+    out_dir = apk_path[:-4]
     result = subprocess.run(
-        ['apktool', 'd', '-f', apk_path],
+        ['apktool', 'd', '-f', '-o', out_dir, apk_path],
         capture_output=True, text=True
     )
-    folder = apk_path[:-4]  # strip .apk
-    if os.path.exists(folder):
-        return folder
+    print("  apktool stderr:", result.stderr[:300])
+    if os.path.exists(out_dir):
+        return out_dir
     return None
 
 def cleanup(folder):
-    if folder and os.path.exists(folder):
+    # Safety check: only delete if it looks like a decompiled APK folder
+    if folder and os.path.exists(folder) and os.path.exists(os.path.join(folder, "AndroidManifest.xml")):
         shutil.rmtree(folder)
 
 def find_smali_root(folder, package_name):
